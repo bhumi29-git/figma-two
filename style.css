@@ -14,9 +14,9 @@
   background: #fff;
   z-index: 10;
   position: fixed;
+  border-bottom: 1px solid black;
 }
-/* Left side */
-.nav-left {
+.nav-left, .nav-right {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -37,17 +37,9 @@
   font-weight: 500;
   transition: color 0.3s;
 }
-/* Center logo */
 .logo {
   font-size: 18px;
-  text-transform: uppercase;
   Letter-spacing: 7px;
-}
-/* Right side */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 35px;
 }
 .search-box {
   position: relative;
@@ -70,10 +62,31 @@
   cursor: pointer;
 }
 
+/* Responsive design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-left, .nav-right {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+}
+
+
+
 /*------------------------ Hero section -----------------------------*/
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-image: url('img/hero.png'); 
   background-size: cover;
   background-position: center;
@@ -108,22 +121,6 @@
 }
 /* Responsive design */
 @media (max-width: 900px) {
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 20px;
-  }
-
-  .nav-left, .nav-right {
-    flex: 1 1 100%;
-    justify-content: center;
-  }
-
-  .menu {
-    gap: 15px;
-  }
-
   .hero {
     padding-left: 40px;
   }
@@ -133,28 +130,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .menu {
-    display: none;
-  }
 
-  .search-bar {
-    display: none;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .shop-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-}
 
 .section-heading {
   text-align: center;
@@ -195,6 +171,7 @@
   padding: 20px 0;
   color: black;
   font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
 }
 
  /* ------------------- Main one section ----------------------------------*/
@@ -236,7 +213,7 @@
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 10px 0;
+  padding: 8px;
   cursor: pointer;
   max-width: 100px;
 }
@@ -294,9 +271,10 @@
   background-color: transparent;
   color: black;
   border: 1px solid black;
-  padding: 10px 0;
+  padding: 10px;
   cursor: pointer;
   max-width: 100px;
+  white-space: nowrap;
 }
 
 /* Responsive design */
@@ -355,7 +333,8 @@
   border: 1px solid white;
   padding: 10px 0;
   cursor: pointer;
-  max-width: 100px;
+  padding: 15px;
+  text-decoration: none;
 }
 
 /* Responsive design */
