@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  pointer-events: auto;
 }
-/*navbar*/
+/*----------------header--------------*/
 .navbar {
   width: 100%;
   display: flex;
@@ -15,6 +14,7 @@
   background: #fff;
   z-index: 10;
   position: fixed;
+  top:0;
   border-bottom: 1px solid black;
 }
 .nav-left, .nav-right {
@@ -38,13 +38,15 @@
   font-weight: 500;
   transition: color 0.3s;
 }
+
 .logo {
   font-size: 18px;
   Letter-spacing: 7px;
 }
+
 .search-box {
   position: relative;
-  }
+}
 .search-box input {
   padding: 6px 30px 6px 10px;
   border: 1px solid #ccc;
@@ -82,8 +84,6 @@
   }
 }
 
-
-
 /*------------------------ Hero section -----------------------------*/
 .hero {
   width: 100%;
@@ -97,6 +97,7 @@
   padding-left: 12%;
   color: white;
   position: relative;
+  margin-top: 70px;
 }
 .hero-content {
   color: white;
@@ -123,7 +124,8 @@
 /* Responsive design */
 @media (max-width: 900px) {
   .hero {
-    padding-left: 40px;
+    padding-left: 20px;
+    height :65vh;
   }
 
   .hero-content h1 {
@@ -131,8 +133,7 @@
   }
 }
 
-
-
+/*-----------image category----------------*/
 .section-heading {
   text-align: center;
   margin: 40px 0 10px;
@@ -152,15 +153,14 @@
 /* Image Grid */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
   padding: 10px;
   max-width: 1300px;
   margin: 0 auto;
 }
 .image-card {
   background: #fff;
-  overflow: hidden;
   text-align: center;
 }
 .image-card img {
@@ -188,26 +188,28 @@
 .image-side img {
   width: 100%;
   height: 100%; 
+  object-fit: cover;
 }
 .info-side {
   width: 80%;
   background-color: black;
   color: white;
-  padding:  30px 100px;
+  padding:  30px 60px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .info-side h4 {
  font-size: 10px;
- margin-bottom: 4rem;
+ margin-bottom: 2rem;
 }
 .info-side h2 {
  font-size: 20px;
- margin-bottom: 2rem;
+ margin-bottom: 1.5rem;
 }
 .info-side p {
-  margin-bottom: 3rem;
-  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
   max-width: 700px; 
 }
 .show-more {
@@ -216,24 +218,23 @@
   border: 1px solid white;
   padding: 8px;
   cursor: pointer;
-  max-width: 100px;
+  width: 120px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .one-section {
     flex-direction: column;
-    height: auto;
   }
 
-  .image-side,
+  .image-side {
+    width: 100%;
+    height: 250px;
+  }
+
   .info-side {
     width: 100%;
-    height: auto;
-  }
-
-  .image-side img {
-    height: 250px;
+    padding: 30px;
   }
 }
 /* ------------------- Main two section ----------------------------------*/
@@ -250,23 +251,25 @@
 .image-sideone img {
   width: 100%;
   height: 100%; 
+  object-fit: cover;
 }
 .info-sideone {
   width: 65%;
   background-color: silver;
   color: black;
-  padding:  5rem;
+  padding:  4rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .info-sideone h2 {
- font-size: 20px;
+ font-size: 22px;
  margin-bottom: 2rem;
 }
 .info-sideone p {
   margin-bottom: 3rem;
-  line-height: 1.3;
   max-width: 500px; 
+  line-height: 1.5;
 }
 .show-moreone {
   background-color: transparent;
@@ -274,15 +277,13 @@
   border: 1px solid black;
   padding: 10px;
   cursor: pointer;
-  max-width: 100px;
-  white-space: nowrap;
+  width: 140px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .two-section {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column-reverse;
   }
 
   .image-sideone,
@@ -310,31 +311,32 @@
 .image-sidetwo img {
   width: 100%;
   height: 100%; 
+  object-fit: cover;
 }
 .info-sidetwo {
   width: 70%;
   background-color: black;
   color: white;
-  padding:  6rem;
+  padding:  5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .info-sidetwo h2 {
- font-size: 20px;
+ font-size: 22px;
  margin-bottom: 2rem;
 }
 .info-sidetwo p {
-  margin-bottom: 3rem;
-  line-height: 1.3;
+  margin-bottom: 2rem;
+  line-height: 1.5;
   max-width: 600px; 
 }
 .show-moretwo {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 10px 0;
+  padding: 12px 20px;
   cursor: pointer;
-  padding: 15px;
   text-decoration: none;
 }
 
@@ -342,49 +344,50 @@
 @media (max-width: 768px) {
   .three-section {
     flex-direction: column;
-    height: auto;
   }
 
-  .image-sidetwo,
-  .info-sidetwo {
+  .image-sidetwo {
     width: 100%;
-    height: auto;
   }
 
   .image-sidetwo img {
     height: 250px;
   }
+
+  .info-sidetwo {
+    padding: 30px;
+    width: 100%;
+  }
 }
-/*footer*/
+
+/*-------------------footer-------------------------*/
 .footer {
-  position: absolute;
   width: 100%;
   background: silver;
-  border: 1px white;
 }
 
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 6px;
+  gap: 40px;
   padding: 40px;
 }
 
-.footer-row .footer-col h4 {
+.footer-col h4 {
   color: black;
   font-size: 16px;
   font-weight: bold;
 }
 
 .footer-col .links {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 13px;
 }
 
 .footer-col .links li {
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .footer-col .links li a {
@@ -394,7 +397,7 @@
 
 
 .footer-col p {
-  margin: 30px 0;
+  margin: 25px 0;
   color: black;
   max-width: 300px;
   font-size: 14px;
@@ -419,19 +422,15 @@
   color: black;
 }
 
-/*.footer-col form button:hover {
-  background: #cecccc;
-}*/
-
 .footer-col .icons {
   display: flex;
-  margin-top: 30px;
-  gap: 55px;
-  cursor: pointer;
+  margin-top: 20px;
+  gap: 30px;
 }
 
 .footer-col .icons i {
   color: black;
+  cursor: pointer;
 }
 
 .footer-col .icons i:hover  {
@@ -439,44 +438,29 @@
 }
 
 .footer-bottom {
-  padding-bottom : 40px;
+  padding :20px;
   text-align: center;
 }
 
 .footer-bottom a {
   margin: 0 15px;
   text-decoration: none;
-/*list-style-type: disc;*/
   display: inline;
   justify-content: center;
-  gap: 80px;
-  color: black;
-  transition: 0.3s;  
+  color: black;  
 }
 @media (max-width: 768px) {
-  .footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    border-radius: 0;
-  }
-
   .footer .footer-row {
     padding: 20px;
-    gap: 2rem;
+    gap :20px;
+    text-align: center;
   }
 
   .footer-col form {
     display: block;
   }
 
-  .footer-col form :where(input, button) {
+  .footer-col input {
     width: 100%;
   }
-
-  .footer-col form button {
-    margin: 10px 0 0 0;
-  }
-}
+} 
