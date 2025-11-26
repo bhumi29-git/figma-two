@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    width: 100%;
+    height: 300px;                
+    background-image: url("img/sn.png");
+    filter: grayscale(60%);
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    display: flex;                
+    justify-content: center;     
+    align-items: center;          
+    text-align: center;
+}
+
+.hero-content {
+  color: white;
+  max-width: 600px;
+}
+.hero-content h2 {
+  font-size: 1rem;
+  margin-top: 40px;
+  font-weight: normal;
+}
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.hero-content p {
+ font-size: 1rem;
+ color: white;
+ margin-bottom: 30px;
+}
+
+/* Responsive text size */
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.necklace-section {
+    width: 100%;
+}
+
+.top-row {
+    padding: 60px 60px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.left h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.left h2 .small-text{
+    font-size: 16px;
+    color: grey;
+    margin-left: 50px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.shop-btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Image Grid */
+.image-grid {
+    padding: 30px 40px 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;      /* 30px reduced → better spacing */
+    max-width: 1300px;
+    margin: 0 auto;
+    column-gap: 40px;
+    border-bottom: 1px solid black;
+}
+
+.image-card {
+    background: #fff;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: 245px;   /* Fixed height → no extra space in rows */
+    object-fit: cover;
+    display: block;  /* Remove inline-image bottom gap */
+    margin-bottom: 10px;
+}
+
+.image-card p {
+    margin: 0 0 20px 0; /* remove bottom extra space */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image-card img {
+        height: 200px; /* better on mobile */
+        width: 100%;
+        object-fit: cover;
+    }
+}

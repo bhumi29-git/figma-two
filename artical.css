@@ -1,0 +1,88 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* ------- TOP SECTION ------- */
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+    .section-top {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .text-block {
+        flex: 1 1 350px;
+        line-height: 1.6;
+       /* margin-left: 140px;*/
+    }
+
+    .text-block h4{
+        font-size: 13px;
+        font-weight: normal;
+        margin-top: 60px;
+        margin-bottom: 25px;
+    }
+     .text-block h1{
+        font-size: 30px;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+    .text-block p {
+        margin-bottom: 12px;
+        max-width: 650px;
+    }
+
+    .side-img {
+        flex: 1 1 300px;
+        max-width: 350px;
+       /* margin-right: 140px;*/
+    }
+
+    .side-img img {
+        width: 100%;
+    }
+
+    /* ------- QUOTE ------- */
+    .quote-container {
+        max-width:900px;
+        text-align: center;
+    }
+    blockquote{
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 21px;
+        line-height: 1.5;
+        padding-left: 20px;
+        font-style: italic;
+    }
+    blockquote p{
+        margin: 0 0 10px 0;   
+    }
+    author{
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        color: grey;
+        font-style: normal;
+    }
+    author2{
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        font-style: normal;
+        max-width: 650px;
+    }
+    
+
+    
