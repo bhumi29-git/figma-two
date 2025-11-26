@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/*footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  background: silver;
+  border: 1px white;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 40px;
+}
+
+.footer-row .footer-col h4 {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-col .links {
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-col p {
+  margin: 30px 0;
+  color: black;
+  max-width: 300px;
+  font-size: 14px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 6px;
+}
+
+.footer-col input {
+  height: 40px;
+  background: white;
+  width: 100%;
+  outline: none;
+  border: 1px solid white ;
+  color: black;
+  padding-left: 20px;
+}
+
+.footer-col input::placeholder {
+  color: black;
+}
+
+/*.footer-col form button:hover {
+  background: #cecccc;
+}*/
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 55px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: black;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+.footer-bottom {
+  padding-bottom : 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  margin: 0 20px;
+  text-decoration: none;
+/*list-style-type: disc;*/
+  display: inline;
+  justify-content: center;
+  /*gap: 80px;*/
+  color: black;
+  
+}
+
+@media (max-width: 768px) {
+
+  .footer-col .icons {
+    flex-wrap: wrap;
+    gap: 20px;        /* Smaller gap */
+    justify-content: center;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .footer, .footer * {
+    max-width: 100%;
+  }
+}
